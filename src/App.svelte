@@ -1,30 +1,44 @@
 <script>
-	export let name;
+    export let options;
+    export let navBtn;
+
+    let current = options[0];
+
+    const startExp = () => {
+        if(options[0].selected === true) 
+            options[0].selected = false
+            options[1].selected = true
+            current = options[1]
+    } 
+
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+    
+    {#if current.selected === true && current.name === 'Landing' }
+        <svelte:component this={current.component}/>
+        <button class="start-cta" on:click={startExp}>
+            Start experience
+        </button>
+    {:else if current.selected === true && current.name === 'Game'}
+        <svelte:component this={current.component} {navBtn} />
+    {/if}
+
 </main>
 
+
 <style>
+    *,
+    *::after,
+    *::before {
+        box-sizing: border-box;
+    }
+
 	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
+		display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 	}
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
 </style>
