@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
 
-  import { distance } from "./../../utils";
+  import { distance } from "../../../utils";
 
   import Lamp from "./Lamp.svelte";
   import LineDrawing from "./LineDrawing.svelte";
@@ -48,6 +48,7 @@
     // si on appuie sur le tracé actif, on lance le tracé
     if (e.path[0].id === "modele-" + lines[index].id) {
       tracing = true;
+      lines[index].startingPoint = [e.clientX, e.clientY];
     }
   };
 
@@ -73,15 +74,18 @@
       previousPoint = currentPoint ? currentPoint : [e.clientX, e.clientY];
       currentPoint = [e.clientX, e.clientY];
       const dist = distance(previousPoint, currentPoint);
-      if (dist >= -1) {
+      console.log({ dist });
+      if (dist >= 0) {
         // et on fait avancer la ligne
-        lines[index].progress -= Math.abs(dist);
+        lines[index].progress -= dist;
       } else {
         currentPoint = null;
       }
     }
   };
 </script>
+
+<svelte:window on:mousemove={traceLine} on:mouseup={stopDetection} />
 
 <div>
   <!-- svelte-ignore a11y-mouse-events-have-key-events -->
@@ -91,8 +95,6 @@
     version="1.1"
     id="svg"
     on:mousedown={startDetection}
-    on:mouseup={stopDetection}
-    on:mousemove={traceLine}
   >
     <Lamp />
     {#each lines as line (line.id)}
@@ -100,7 +102,7 @@
       <LineDrawing {line} />
     {/each}
   </svg>
-  
+
   {#if success}
     <p>Bravo !!</p>
   {/if}

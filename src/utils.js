@@ -1,5 +1,5 @@
 export let distance = (a, b) => {
-  let distX = b[0] - a[0];
-  let distY = b[1] - a[1];
-  return distX + distY;
+  let x = Math.pow((b[0] - a[0]), 2);
+  let y = Math.pow((b[1] - a[1]), 2);
+  return Math.sqrt(x + y);
 };
