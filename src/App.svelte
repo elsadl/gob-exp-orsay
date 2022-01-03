@@ -1,8 +1,9 @@
 <script>
-	import MiniGame from "./components/mini-games/lamp/MiniGame.svelte";
+	import MiniGame from "./components/mini-games/lampe/Container.svelte";
 </script>
 
 <main>
+	Coucou
 </main>
 
 <style>
