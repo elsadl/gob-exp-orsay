@@ -7,6 +7,9 @@
   import LineDrawing from "./LineDrawing.svelte";
   import LineModele from "./LineModele.svelte";
 
+  import { createEventDispatcher } from "svelte";
+  const dispatch = createEventDispatcher();
+
   let tracing = false;
   let success = false;
 
@@ -64,6 +67,7 @@
       } else if (lines[index].progress <= 0 && index === lines.length - 1) {
         // et si c'était la dernière on finit le mini-jeu
         success = true;
+        dispatch("endMiniGame");
       }
     }
   };

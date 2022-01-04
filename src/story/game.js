@@ -1,19 +1,17 @@
 export const game = [
   {
     clue: [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa ea animi eos aliquam!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa !",
+      "Clue desk écran un. Clue desk écran un. Clue desk écran un. Clue desk écran un.",
+      "Clue desk écran deux. Clue desk écran deux. Clue desk écran deux. Clue desk écran deux.",
     ],
     question: [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa ea animi eos aliquam!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa !",
+      "Question desk écran un. Question desk écran un. Question desk écran un. Question desk écran un.",
+      "Question desk écran deux. Question desk écran deux. Question desk écran deux. Question desk écran deux.",
     ],
+    "mini-game": [],
     answer: [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa ea animi eos aliquam!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa !",
+      "Answser desk écran un. Answser desk écran un. Answser desk écran un. Answser desk écran un.",
+      "Answser desk écran deux. Answser desk écran deux. Answser desk écran deux. Answser desk écran deux.",
     ],
   },
   {

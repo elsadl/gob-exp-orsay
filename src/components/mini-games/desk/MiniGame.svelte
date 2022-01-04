@@ -4,6 +4,9 @@
 
   import { miniGameIndex } from "../../../stores";
 
+  import { createEventDispatcher } from "svelte";
+  const dispatch = createEventDispatcher();
+
   const wordLetters = ["C", "H", "Ê", "N", "E"];
 
   let success = false;
@@ -20,10 +23,12 @@
     if (discoveredLetters.length === wordLetters.length) {
       success = true;
 
-      setTimeout(() => {
-        console.log("suivaaant")
-        $miniGameIndex++;
-      }, 1000);
+      dispatch("endMiniGame");
+
+      // setTimeout(() => {
+      //   console.log("suivaaant");
+      //   $miniGameIndex++;
+      // }, 1000);
     }
     console.log(discoveredLetters);
   };
