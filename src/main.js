@@ -7,7 +7,6 @@ import Passport from './components/Passport.svelte'
 const app = new App({
 	target: document.body,
 	props: {
-		name: 'world',
         options: [
             { selected: true, name: 'Landing', component: Landing },
             { selected: false, name: 'Game', component: Game },
@@ -23,7 +22,7 @@ const app = new App({
                 name: 'Map', 
                 component: Map,
             },
-        ]
+        ],
 	}
 });
 

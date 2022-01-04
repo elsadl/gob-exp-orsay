@@ -2,6 +2,8 @@
   import Word from "./Word.svelte";
   import Letters from "./Letters.svelte";
 
+  import { miniGameIndex } from "../../../stores";
+
   const wordLetters = ["C", "H", "Ê", "N", "E"];
 
   let success = false;
@@ -17,6 +19,11 @@
 
     if (discoveredLetters.length === wordLetters.length) {
       success = true;
+
+      setTimeout(() => {
+        console.log("suivaaant")
+        $miniGameIndex++;
+      }, 1000);
     }
     console.log(discoveredLetters);
   };
