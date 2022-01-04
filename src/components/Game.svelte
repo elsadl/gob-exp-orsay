@@ -7,7 +7,6 @@
   const { sentences: sentencesGroupe } = intro;
 
   let isPassport = navBtn[0];
-  let isMap = navBtn[1];
   $: count = 0;
   $: sentences = [...sentencesGroupe];
   $: sentence = sentences[count].split("").map((item) => item);
@@ -21,15 +20,6 @@
     isPassport = navBtn[0];
   };
 
-  const handleMapClick = () => {
-    if (isMap.selected === true) {
-      navBtn[1].selected = false;
-    } else {
-      navBtn[1].selected = true;
-    }
-    isMap = navBtn[1];
-  };
-
   const nextSentence = () => {
     count += 1;
     sentence = sentences[count].split("").map((item) => item);
@@ -41,12 +31,9 @@
 
   <div class="nav">
     <Button icon={"map"} handleClick={handlePassClick} />
-    <Button icon={"map"} handleClick={handleMapClick} />
   </div>
 
-  {#if isMap.selected === true}
-    <svelte:component this={isMap.component} />
-  {:else if isPassport.selected === true}
+  {#if isPassport.selected === true}
     <svelte:component this={isPassport.component} />
   {/if}
 </section>

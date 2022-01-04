@@ -11,18 +11,11 @@ const app = new App({
       { selected: true, name: "Landing", component: Landing },
       { selected: false, name: "Game", component: Game },
     ],
-    navBtn: [
-      {
+    navBtn: [{
         selected: false,
         name: "Passport",
         component: Passport,
-      },
-      {
-        selected: false,
-        name: "Map",
-        component: Map,
-      },
-    ],
+      }],
   },
 });
 
