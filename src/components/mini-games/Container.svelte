@@ -1,8 +1,8 @@
 <script>
   import { miniGames, miniGameIndex } from "../../stores";
-  import Speech from "../Speech.svelte";
-
   import { game } from "../../story/game";
+  import Speech from "../Speech.svelte";
+  import NewStamp from "./newStamp.svelte";
 
   $: activeGame = $miniGames[$miniGameIndex];
 
@@ -50,17 +50,31 @@
         break;
       case "answer":
         console.log("on affiche l'écran des timbres");
+        status = "stamp";
+        break;
+      case "answer":
+        console.log("on affiche l'écran des timbres");
+        status = "stamp";
+        break;
+      case "stamp":
+        console.log("on passe au mini-jeu suivant");
+        $miniGameIndex++;
+        status = "clue";
         break;
       default:
         console.log("oups");
     }
   };
-
 </script>
 
 <div>
   {#if status === "mini-game"}
-    <svelte:component this={activeGame.component} on:endMiniGame={nextSequence} />
+    <svelte:component
+      this={activeGame.component}
+      on:endMiniGame={nextSequence}
+    />
+  {:else if status === "stamp"}
+    <NewStamp game={activeGame} on:stampCollected={nextSequence} />
   {/if}
   {#if sentence}
     <section on:click={nextSentence}>

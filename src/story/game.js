@@ -9,6 +9,7 @@ export const game = [
       "Question desk écran deux. Question desk écran deux. Question desk écran deux. Question desk écran deux.",
     ],
     "mini-game": [],
+    stamp: [],
     answer: [
       "Answser desk écran un. Answser desk écran un. Answser desk écran un. Answser desk écran un.",
       "Answser desk écran deux. Answser desk écran deux. Answser desk écran deux. Answser desk écran deux.",
@@ -25,6 +26,8 @@ export const game = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa ea animi eos aliquam!",
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa !",
     ],
+    "mini-game": [],
+    stamp: [],
     answer: [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus!",
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa ea animi eos aliquam!",
@@ -42,6 +45,8 @@ export const game = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa ea animi eos aliquam!",
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa !",
     ],
+    "mini-game": [],
+    stamp: [],
     answer: [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus!",
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa ea animi eos aliquam!",
@@ -59,6 +64,8 @@ export const game = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa ea animi eos aliquam!",
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa !",
     ],
+    "mini-game": [],
+    stamp: [],
     answer: [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus!",
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa ea animi eos aliquam!",

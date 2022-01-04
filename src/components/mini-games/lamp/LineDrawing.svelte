@@ -14,7 +14,7 @@
 
 <style>
   .drawing {
-    stroke-width: 6px;
+    stroke-width: 2px;
     stroke: red;
     pointer-events: none;
   }

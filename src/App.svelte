@@ -1,8 +1,8 @@
 <script>
-  import MiniGameContainer from "./components/mini-games/Container.svelte";
-
   export let options;
   export let navBtn;
+
+//   import MiniGame from "./components/mini-games/Container.svelte";
 
   let current = options[0];
 
@@ -14,16 +14,15 @@
 </script>
 
 <main>
-  <MiniGameContainer />
-
-  <!-- {#if current.selected === true && current.name === 'Landing' }
+  <!-- <MiniGame /> -->
+  {#if current.selected === true && current.name === 'Landing' }
         <svelte:component this={current.component}/>
         <button class="start-cta" on:click={startExp}>
             Start experience
         </button>
     {:else if current.selected === true && current.name === 'Game'}
         <svelte:component this={current.component} {navBtn} />
-    {/if} -->
+    {/if}
 </main>
 
 <style>
