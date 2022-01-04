@@ -2,6 +2,7 @@
   export let letter;
   export let wordLetters;
 
+  import gsap, { Power3 } from 'gsap'; 
   import { createEventDispatcher } from "svelte";
   const dispatch = createEventDispatcher();
 
@@ -16,6 +17,10 @@
       document.getElementById("letter-" + selected).classList.add("disabled");
     } else {
       console.log("nope");
+      e.target.classList.add('shaking')
+      setTimeout(() => {
+        e.target.classList.remove('shaking')
+      }, 450);
     }
   };
 </script>
@@ -25,13 +30,33 @@
 </div>
 
 <style>
+    @keyframes shake {
+        25% {
+            transform:translateX(6px)
+        }
+        50% {
+            transform:translateX(-4px);
+        }
+        75% {
+            transform:translateX(2px);
+        }
+        100% {
+            transform:translateX(0);
+        }
+    }
     .letter {
         cursor: pointer;
         text-align: center;
+        margin: 8px;
     }
 
     :global(.letter.disabled) {
         opacity: 0.2;
         cursor: default;
+    }
+
+    :global(.shaking) {
+        /* color: red; */
+        animation: shake .4s ease-in-out forwards;
     }
 </style>
