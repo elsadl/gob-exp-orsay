@@ -4,10 +4,13 @@
     import Speech from './Speech.svelte'
     export let navBtn;
 
-    const { sentences } = intro
+    const { sentences: sentencesGroupe } = intro
 
     let isPassport = navBtn[0]
     let isMap = navBtn[1]
+    $: count = 0
+    $: sentences = [...sentencesGroupe]
+    $: sentence = sentences[count].split('').map((item) => item)
 
     const handlePassClick = () => { 
         if(isPassport.selected === true) {
@@ -27,14 +30,19 @@
         isMap = navBtn[1]
     }
 
+    const nextSentence = () => {
+        count += 1;
+        sentence = sentences[count].split('').map((item) => item)
+    }
+
 </script>
 
-<section>
-    <Speech sentence={sentences[0]} />
+<section on:click={nextSentence}>
+    <Speech {sentence} {count} />
 
     <div class="nav">
-        <Button icon={'map'} handleClick={handlePassClick} disabled={isPassport.selected} />
-        <Button icon={'map'} handleClick={handleMapClick} disabled={isMap.selected} />
+        <Button icon={'map'} handleClick={handlePassClick} />
+        <Button icon={'map'} handleClick={handleMapClick} />
     </div>
 
     {#if isMap.selected === true}
