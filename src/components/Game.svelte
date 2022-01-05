@@ -3,6 +3,7 @@
   import MiniGameContainer from "./mini-games/Container.svelte";
   import Button from "./Button.svelte";
   import Speech from "./Speech.svelte";
+
   export let navBtn;
 
   const { sentences: sentencesGroupe } = intro;
