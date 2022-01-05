@@ -8,8 +8,9 @@ const app = new App({
   target: document.body,
   props: {
     options: [
-      { selected: true, name: "Landing", component: Landing },
-      { selected: false, name: "Game", component: Game },
+      // DÉV !! échanger true/false 
+      { selected: false, name: "Landing", component: Landing },
+      { selected: true, name: "Game", component: Game },
     ],
     navBtn: [{
         selected: false,

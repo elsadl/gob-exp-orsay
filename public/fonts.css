@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "Vulf";
+    font-weight: 400;
+    src: url("/fonts/VulfSans-Regular.woff2") format("woff2")
+}
+
+@font-face {
+    font-family: "Vulf";
+    font-weight: 700;
+    src: url("/fonts/VulfSans-Bold.woff2") format("woff2")
+}
+
+@font-face {
+    font-family: "Vulf";
+    font-weight: 900;
+    src: url("/fonts/VulfSans-Black.woff2") format("woff2")
+}

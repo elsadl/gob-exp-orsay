@@ -1,6 +1,9 @@
 <script>
   import gsap, { Power3 } from "gsap";
   import { afterUpdate, createEventDispatcher, onMount } from "svelte";
+
+  import SpeechButton from "./SpeechButton.svelte";
+
   export let sentences;
   export let count;
 
@@ -63,7 +66,7 @@
 
 <section>
   <div class="speech">
-    <h3 class="sentence">
+    <p class="sentence">
       {#if sentences[count]}
         {#each sentences[count] as item}
           {#if item === " "}
@@ -73,9 +76,11 @@
           {/if}
         {/each}
       {/if}
-    </h3>
+    </p>
   </div>
-  <button on:click={nextSentence}>Continuer</button>
+  <div on:click={nextSentence}>
+    <SpeechButton>Continuer</SpeechButton>
+  </div>
   <img class="avatar" src="/images/Amigos.png" alt="" />
 </section>
 
@@ -83,23 +88,27 @@
   section {
     /* visibility: hidden; */
     position: relative;
+    font-size: 1.25em;
   }
+
   .speech {
     width: 400px;
     padding: 20px 30px;
-    box-shadow: 10px 10px 0px #d7cec8;
+    box-shadow: 10px 10px 0px var(--shadow);
     border-radius: 30px;
     /* opacity: 0;
     transform: translateY(-40px); */
     /* visibility: hidden; */
     /* provisoire */
-    background-color: #e5e5e5;
+    background-color: #fff;
   }
-  h3 {
-    font-size: 1.25em;
+
+  p {
     line-height: 1.25;
     margin: 0;
+    font-size: 1em;
   }
+
   .space {
     padding-right: 8px;
   }
@@ -109,6 +118,7 @@
     will-change: transform;
     /* padding-right: 8px; */
   }
+
   .avatar {
     position: absolute;
     right: -165px;
