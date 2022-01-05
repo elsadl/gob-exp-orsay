@@ -1,11 +1,21 @@
 <script>
     import gsap, { Power3 } from "gsap";
-    import { afterUpdate, onMount } from "svelte";
-    export let sentence;
+    import { afterUpdate, createEventDispatcher } from "svelte";
+    import { intro } from "../story/intro";
+    export let sentences;
     export let count;
 
+    const dispatch = createEventDispatcher();
+
+    const { sentences: sentencesGroupe } = intro;
+
+    $: count = 0;
+    $: sentences = [...sentencesGroupe];
+
+    let tl =  gsap.timeline()
+
     afterUpdate(() => {
-        let tl =  gsap.timeline()
+        console.log(sentences)
         if(count === 0) {
             tl
                 .from(".avatar", {
@@ -36,18 +46,33 @@
             })
     })
 
+    const nextSentence = () => {
+        if(!tl.isActive()) {
+            tl.play()
+            count += 1;
+        } else if(tl.isActive()) {
+            tl.progress(1).pause()
+        }
+
+        if (sentences.length === count) {
+            dispatch("endIntro");
+        }
+    };
+
 </script>
 
-<section>
+<section on:click={nextSentence}>
     <div class="speech">
         <h3 class="sentence">
-            {#each sentence as item}
+            {#if sentences[count]}
+            {#each sentences[count] as item}
                 {#if item === ' ' }
                     <span class="letter space"></span> 
                 {:else}
                     <span class="letter">{@html item}</span>
                 {/if}
             {/each}
+            {/if}
         </h3>
     </div>
     <img class="avatar" src="/images/Amigos.png" alt="">

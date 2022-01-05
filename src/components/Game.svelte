@@ -1,6 +1,5 @@
 <script>
   import { intro } from "../story/intro";
-
   import MiniGameContainer from "./mini-games/Container.svelte";
   import Button from "./Button.svelte";
   import Speech from "./Speech.svelte";
@@ -9,14 +8,9 @@
   const { sentences: sentencesGroupe } = intro;
 
   let isPassport = navBtn[0];
-  let isIntro = true;
+  $: isIntro = true;
 
-  $: count = 0;
   $: sentences = [...sentencesGroupe];
-  $: sentence =
-    count < sentences.length
-      ? sentences[count].split("").map((item) => item)
-      : null;
 
   const handlePassClick = () => {
     if (isPassport.selected === true) {
@@ -27,24 +21,22 @@
     isPassport = navBtn[0];
   };
 
-  const nextSentence = () => {
-    count += 1;
-
-    if (sentences.length === count) {
+  const nextSequence = () => {
       isIntro = false;
       console.log(isIntro);
-    }
-
-    // sentence = sentences[count].split("").map((item) => item);
+      console.log(sentences)
   };
+  
 </script>
 
-<section on:click={nextSentence}>
-  {#if isIntro}
-    <Speech {sentence} {count} />
-  {:else}
-    <MiniGameContainer />
-  {/if}
+<section>
+    {#key isIntro}
+        {#if isIntro}
+            <Speech {sentences} on:endIntro={nextSequence} />
+        {:else}
+            <MiniGameContainer />
+        {/if}
+    {/key}
 
   <div class="nav">
     <Button icon={"map"} handleClick={handlePassClick} />
