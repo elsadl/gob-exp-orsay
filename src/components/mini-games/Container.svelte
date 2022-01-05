@@ -78,7 +78,7 @@
   {/if}
   {#if sentence}
     <section on:click={nextSentence}>
-      <Speech {sentence} {count} />
+      <Speech {sentences} {count} />
     </section>
   {/if}
 </div>
