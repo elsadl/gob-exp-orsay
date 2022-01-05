@@ -18,6 +18,12 @@ import { afterUpdate } from "svelte";
     ? [...game[$miniGameIndex][status]]
     : null;
 
+    const handleStampCollected = () => {
+      activeGame.success = true;
+      $miniGames = [...$miniGames];
+      nextSequence();
+    }
+
   const nextSequence = () => {
     if (loopIndex === gameLoop.length - 1) {
       $miniGameIndex++;
@@ -40,7 +46,7 @@ import { afterUpdate } from "svelte";
         on:endMiniGame={nextSequence}
       />
     {:else if status === "stamp"}
-      <NewStamp game={activeGame} on:stampCollected={nextSequence} />
+      <NewStamp game={activeGame} on:stampCollected={handleStampCollected} />
     {/if}
     {#if sentences.length > 0}
       <section>
