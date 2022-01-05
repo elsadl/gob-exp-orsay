@@ -1,16 +1,12 @@
 <script>
     import gsap, { Power3 } from "gsap";
     import { afterUpdate, createEventDispatcher } from "svelte";
-    import { intro } from "../story/intro";
     export let sentences;
     export let count;
 
     const dispatch = createEventDispatcher();
 
-    const { sentences: sentencesGroupe } = intro;
-
     $: count = 0;
-    $: sentences = [...sentencesGroupe];
 
     let tl =  gsap.timeline()
 
@@ -33,7 +29,7 @@
                 delay: -.7,
                 ease: Power3.easeInOut
             })
-            .from(".letter", {
+            .from(".char", {
                 y: 5, 
                 opacity: 0,
                 duration: .3, 
@@ -67,9 +63,9 @@
             {#if sentences[count]}
             {#each sentences[count] as item}
                 {#if item === ' ' }
-                    <span class="letter space"></span> 
+                    <span class="char space"></span> 
                 {:else}
-                    <span class="letter">{@html item}</span>
+                    <span class="char">{@html item}</span>
                 {/if}
             {/each}
             {/if}
@@ -103,7 +99,7 @@
         padding-right: 8px;
     }
 
-    .letter {
+    .char {
         display: inline-block;
         will-change: transform;
         /* padding-right: 8px; */
