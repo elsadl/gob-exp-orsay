@@ -23,21 +23,17 @@
   };
 
   const nextSequence = () => {
-      isIntro = false;
-      console.log(isIntro);
-      console.log(sentences)
+    console.log("on quitte l'intro");
+    isIntro = false;
   };
-  
 </script>
 
 <section>
-    {#key isIntro}
-        {#if isIntro}
-            <Speech {sentences} on:endIntro={nextSequence} />
-        {:else}
-            <MiniGameContainer />
-        {/if}
-    {/key}
+  {#if isIntro}
+    <Speech {sentences} on:endIntro={nextSequence} />
+  {:else}
+    <MiniGameContainer />
+  {/if}
 
   <div class="nav">
     <Button icon={"map"} handleClick={handlePassClick} />

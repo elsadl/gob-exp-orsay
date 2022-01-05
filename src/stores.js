@@ -15,19 +15,7 @@ export const miniGames = writable([
     success: false,
     stamp: "",
     component: LampMiniGame,
-  },
-  {
-    name: "vitral",
-    success: false,
-    stamp: "",
-    component: DeskMiniGame,
-  },
-  {
-    name: "room",
-    success: false,
-    stamp: "",
-    component: DeskMiniGame,
-  },
+  }
 ]);
 
 export const miniGameIndex = writable(0);

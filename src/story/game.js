@@ -17,59 +17,18 @@ export const game = [
   },
   {
     clue: [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa ea animi eos aliquam!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa !",
+      "Clue lampe écran un. Clue lampe écran un. Clue lampe écran un. Clue lampe écran un.",
+      "Clue lampe écran deux. Clue lampe écran deux. Clue lampe écran deux. Clue lampe écran deux.",
     ],
     question: [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa ea animi eos aliquam!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa !",
+      "Question lampe écran un. Question lampe écran un. Question lampe écran un. Question lampe écran un.",
+      "Question lampe écran deux. Question lampe écran deux. Question lampe écran deux. Question lampe écran deux.",
     ],
     "mini-game": [],
     stamp: [],
     answer: [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa ea animi eos aliquam!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa !",
-    ],
-  },
-  {
-    clue: [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa ea animi eos aliquam!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa !",
-    ],
-    question: [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa ea animi eos aliquam!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa !",
-    ],
-    "mini-game": [],
-    stamp: [],
-    answer: [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa ea animi eos aliquam!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa !",
-    ],
-  },
-  {
-    clue: [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa ea animi eos aliquam!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa !",
-    ],
-    question: [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa ea animi eos aliquam!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa !",
-    ],
-    "mini-game": [],
-    stamp: [],
-    answer: [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa ea animi eos aliquam!",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus! Hic assumenda ipsa !",
+      "Answser lampe écran un. Answser lampe écran un. Answser lampe écran un. Answser lampe écran un.",
+      "Answser lampe écran deux. Answser lampe écran deux. Answser lampe écran deux. Answser lampe écran deux.",
     ],
   },
 ];

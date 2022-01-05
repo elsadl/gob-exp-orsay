@@ -1,6 +1,6 @@
 <script>
   import gsap, { Power3 } from "gsap";
-  import { afterUpdate, createEventDispatcher } from "svelte";
+  import { afterUpdate, createEventDispatcher, onMount } from "svelte";
   export let sentences;
   export let count;
 
@@ -10,44 +10,52 @@
 
   let tl = gsap.timeline();
 
+  // onMount(() => {
+
+  // })
+
   afterUpdate(() => {
-    console.log(sentences);
     if (count === 0) {
-      tl.from(".avatar", {
-        y: "40",
-        duration: 1,
-        opacity: 0,
-        ease: Power3.easeInOut,
-      });
+      console.log("condition????");
+      console.log(tl)
+      // tl.from(".avatar", {
+      //   y: "40",
+      //   duration: 1,
+      //   opacity: 0,
+      //   ease: Power3.easeInOut,
+      // });
     }
-    tl.to(".speech", {
-      y: "0",
-      duration: 1,
-      opacity: 1,
-      delay: -0.7,
-      ease: Power3.easeInOut,
-    }).from(".char", {
-      y: 5,
-      opacity: 0,
-      duration: 0.3,
-      stagger: {
-        each: 0.02,
-        from: "start",
-      },
-      delay: -1.4,
-      ease: Power3.easeInOut,
-    });
+    // tl.to(".speech", {
+    //   y: "0",
+    //   duration: 1,
+    //   opacity: 1,
+    //   delay: -0.7,
+    //   ease: Power3.easeInOut,
+    // }).from(".char", {
+    //   y: 5,
+    //   opacity: 0,
+    //   duration: 0.3,
+    //   stagger: {
+    //     each: 0.02,
+    //     from: "start",
+    //   },
+    //   delay: -1.4,
+    //   ease: Power3.easeInOut,
+    // });
   });
 
   const nextSentence = () => {
-    if (!tl.isActive()) {
-      tl.play();
+    console.log("next sentence")
+
+    // if (!tl.isActive()) {
+    //   tl.play();
       count += 1;
-    } else if (tl.isActive()) {
-      tl.progress(1).pause();
-    }
+    // } else if (tl.isActive()) {
+    //   tl.progress(1).pause();
+    // }
 
     if (sentences.length === count) {
+      count = 0;
       dispatch("endIntro");
     }
   };
@@ -80,8 +88,8 @@
     padding: 20px 30px;
     box-shadow: 10px 10px 0px #d7cec8;
     border-radius: 30px;
-    opacity: 0;
-    transform: translateY(-40px);
+    /* opacity: 0;
+    transform: translateY(-40px); */
     /* visibility: hidden; */
     /* provisoire */
     background-color: #e5e5e5;
