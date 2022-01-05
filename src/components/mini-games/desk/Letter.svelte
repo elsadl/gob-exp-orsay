@@ -47,11 +47,14 @@
     .letter {
         cursor: pointer;
         text-align: center;
-        margin: 8px;
+        margin: 30px;
+        font-family: "Vulf Regular";
+        font-size: 2.5rem;
+        font-weight: 500;
     }
 
     :global(.letter.disabled) {
-        opacity: 0.2;
+        opacity: 0.4;
         cursor: default;
     }
 

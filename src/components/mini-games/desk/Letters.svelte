@@ -29,9 +29,9 @@
 
 <style>
   #letters-grid {
-    width: 400px;
+    width: 680px;
     margin: 0 auto;
-    padding-top: 100px;
+    padding-top: 84px;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
   }
