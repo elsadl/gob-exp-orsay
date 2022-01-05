@@ -61,7 +61,7 @@
   };
 </script>
 
-<section on:click={nextSentence}>
+<section>
   <div class="speech">
     <h3 class="sentence">
       {#if sentences[count]}
@@ -75,6 +75,7 @@
       {/if}
     </h3>
   </div>
+  <button on:click={nextSentence}>Continuer</button>
   <img class="avatar" src="/images/Amigos.png" alt="" />
 </section>
 
