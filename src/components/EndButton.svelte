@@ -18,7 +18,7 @@
     cursor: pointer;
     background-color: white;
     box-shadow: 0px 8px 0px 0px var(--shadow);
-    font-size: 1em;
+    font-size: 1.25em;
     border: 0;
     font-weight: 500;
     /* background-image: url("/images/next.svg"); */

@@ -38,7 +38,12 @@ export const game = [
     {
       clue: [
         {
-          text: "Si je me souviens bien, il y a une lampe nénuphar non loin d’ici.",
+          text: "Tu peux les conserver dans ton passeport d’apprenti muséologue. Il t'aidera à garder une trace de nos recherches.",
+          emotion: "satisfied",
+          hand: "pointing",
+        },
+        {
+          text: "D'ailleurs si on espère pouvoir déchiffrer mes notes, un peu plus de lumière ne ferait pas de mal. Si je me souviens bien, il y a une lampe nénuphar non loin d’ici.",
           emotion: "smile",
           hand: "thinking",
         },
@@ -48,14 +53,9 @@ export const game = [
           hand: "",
         },
         {
-          text: "Travailler entouré de beauté est un luxe.",
+          text: "Travailler entouré de beauté est un luxe... Allons la chercher !",
           emotion: "satisfied",
           hand: "pointing",
-        },
-        {
-          text: "Allons la chercher ! Elle nous sera utile si on veut déchiffrer mes notes.",
-          emotion: "smile",
-          hand: "",
         },
       ],
       question: [
