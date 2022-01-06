@@ -1,28 +1,53 @@
 <script>
+  import SliderExplications from "./SliderExplications.svelte"
+  import { explications } from '../../stores'
   export let miniGames;
   export let id;
 
-  console.log(miniGames);
+  $: count = id;
+
+  const successArray = $miniGames.filter((item) => item.success)
+  console.log(successArray)
+
+  function handleClick() {
+    const nextId = this.getAttribute("data-id")
+    count = nextId
+  }
+
+  const prevArtwork = () => {
+    if(count !== 1 && successArray.length !== 1) {
+      console.log('here')
+      count -= 1
+    }
+  }
+
+  const nextArtwork = () => {
+    if(count !== successArray[successArray.length - 1].id && successArray.length !== 1) {
+      count++
+    }
+  }
 </script>
 
 <div>
   <div class="slider">
-    <h2>Titre de l'oeuvre</h2>
+    {#each $explications as exp}
+      {#if exp.id == count}
+        <SliderExplications content={exp} />
+      {/if}
+    {/each}
 
-    <p>Texte explicatif sur l’oeuvre. Il permet à l’utilisateur de re découvrir l’oeuvre en apprenant son histoire.</p>
-
-    <div class="left-arrow">
-      <img src="./images/left-arrow.png" alt="">
+    <div class={count > 1 ? "left-arrow" : "left-arrow diseabled"}>
+      <img src="./images/left-arrow.png" alt="" on:click={prevArtwork}>
     </div>
-    <div class="right-arrow">
-      <img src="./images/right-arrow.png" alt="">
+    <div class={count > 1 ? "right-arrow" : "right-arrow diseabled"}>
+      <img src="./images/right-arrow.png" alt="" on:click={nextArtwork}>
     </div>
   </div>
 
   <div class="slider-nav">
     {#each $miniGames as miniGame}
       {#if miniGame.success}
-        <div class={miniGame.success ? `stamp-slider-nav ${miniGame.name}-success` : "stamp-slider-nav unachieved"}></div>
+        <div class={miniGame.success ? `stamp-slider-nav ${miniGame.name}-success` : "stamp-slider-nav unachieved"} data-current={miniGame.id == count ? "true" : "false"} data-id={miniGame.id} on:click={handleClick}></div>
       {:else}
         <div class={miniGame.success ? `stamp-slider-nav ${miniGame.name}-success` : "stamp-slider-nav unachieved"}></div>
       {/if}
@@ -59,18 +84,12 @@
     cursor: pointer;
   }
 
-  .slider h2 {
-    margin: 0
-  }
-
-  .slider p {
-    font-size: 1.5rem;
-  }
-
   .slider-nav {
     display: flex;
     justify-content: space-between;
     align-self: center;
+
+    transition: all .4s ease-in-out;
   }
 
   .stamp-slider-nav {
@@ -82,5 +101,10 @@
   .unachieved {
     background: url('/images/undiscoverd-stamp.png') center no-repeat;
     background-size: cover;
+  }
+
+  .diseabled {
+    opacity: 0.35;
+    cursor: initial;
   }
 </style>

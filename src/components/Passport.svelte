@@ -38,8 +38,8 @@
 
 <style>
   .passport {
-    width: 96%;
-    height: 93vh;
+    width: 930px;
+    height: 674px;
     position: absolute;
     z-index: 1;
     border-radius: 10px 40px 10px 10px;

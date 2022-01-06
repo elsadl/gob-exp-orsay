@@ -82,3 +82,12 @@ button:focus {
   background: url('/images/bureau.png') center no-repeat;
   background-size: cover;
 } 
+
+.lamp-success {
+  background: url('/images/lampe.png') center no-repeat;
+  background-size: cover;
+} 
+
+div[data-current="true"] {
+  transform: translateY(-10px);
+}
