@@ -6,6 +6,7 @@ import LampMiniGame from "./components/mini-games/lamp/MiniGame.svelte";
 export const miniGames = writable([
   // DÉV !! passer success à false pour les deux
   {
+    id: 1,
     name: "desk",
     success: false,
     sentence: {
@@ -16,6 +17,7 @@ export const miniGames = writable([
     component: DeskMiniGame,
   },
   {
+    id: 2,
     name: "lamp",
     success: false,
     sentence: {

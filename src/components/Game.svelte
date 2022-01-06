@@ -58,7 +58,8 @@
 
   .nav {
     position: absolute;
-    top: 32px;
-    right: 32px;
+    top: 42px;
+    right: 42px;
+    z-index: 2;
   }
 </style>
