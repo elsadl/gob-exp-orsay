@@ -52,17 +52,3 @@
   <Word {wordLetters} {discoveredLetters} />
   <Letters {wordLetters} on:newLetter={handleNewLetter} />
 </div>
-
-<style>
-  #letters-game {
-    /* width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
-  }
-
-  /* p {
-    text-align: center;
-  } */
-</style>
