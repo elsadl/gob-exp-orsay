@@ -5,7 +5,7 @@
   import SpeechButton from "./SpeechButton.svelte";
 
   export let sentences;
-  export let count;
+  export let button = true;
 
   const dispatch = createEventDispatcher();
 
@@ -79,9 +79,11 @@
         {/if}
       </p>
     </div>
-    <div on:click={nextSentence}>
-      <SpeechButton>Continuer</SpeechButton>
-    </div>
+    {#if button}
+      <div on:click={nextSentence}>
+        <SpeechButton>Continuer</SpeechButton>
+      </div>
+    {/if}
   </div>
   <div class="avatar">
     <img :class={sentences[count].emotion} src="/images/Amigos.png" alt="" />
