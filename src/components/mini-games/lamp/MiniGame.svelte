@@ -40,6 +40,7 @@
   });
 
   let startDetection = (e) => {
+    console.log("start");
     console.log(e);
     // si on appuie sur le tracé actif, on lance le tracé
     if (e.path[0].id === "modele-" + lines[index].id) {
@@ -49,6 +50,9 @@
   };
 
   let stopDetection = (e) => {
+    console.log("stop");
+    console.log(e);
+
     // si on arrête d'appuyer, on stoppe le tracé
     if (tracing) {
       tracing = false;
@@ -67,6 +71,8 @@
   };
 
   let traceLine = (e) => {
+    console.log("move")
+    console.log(e)
     if (tracing) {
       // on calcule la distance par rapport au point précédent
       previousPoint = currentPoint ? currentPoint : [e.clientX, e.clientY];
