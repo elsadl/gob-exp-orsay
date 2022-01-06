@@ -2,8 +2,6 @@
   export let options;
   export let navBtn;
 
-  //   import MiniGame from "./components/mini-games/Container.svelte";
-
   // let current = options[0];
   let current = options[1];
 
@@ -15,7 +13,6 @@
 </script>
 
 <main>
-  <!-- <MiniGame /> -->
   {#if current.selected === true && current.name === "Landing"}
     <svelte:component this={current.component} />
     <button class="start-cta" on:click={startExp}> Start experience </button>
@@ -36,5 +33,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 670px;
+    width: 926px;
   }
 </style>

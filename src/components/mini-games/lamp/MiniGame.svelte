@@ -11,7 +11,6 @@
   const dispatch = createEventDispatcher();
 
   let tracing = false;
-  let success = false;
 
   let progress;
   let previousPoint;
@@ -60,8 +59,9 @@
         index += 1;
       } else if (lines[index].progress <= 0 && index === lines.length - 1) {
         // et si c'était la dernière on finit le mini-jeu
-        success = true;
-        dispatch("endMiniGame");
+        setTimeout(() => {
+          dispatch("endMiniGame");
+        }, 1500);
       }
     }
   };
@@ -101,8 +101,4 @@
       <LineDrawing {line} />
     {/each}
   </svg>
-
-  {#if success}
-    <p>Bravo !!</p>
-  {/if}
 </div>

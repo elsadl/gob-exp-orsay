@@ -57,7 +57,7 @@
 
   .nav {
     position: absolute;
-    top: 42px;
-    right: 42px;
+    top: 32px;
+    right: 32px;
   }
 </style>

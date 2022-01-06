@@ -9,8 +9,6 @@
 
   const wordLetters = ["C", "H", "Ê", "N", "E"];
 
-  let success = false;
-
   $: discoveredLetters = [];
 
   let handleNewLetter = (e) => {
@@ -21,16 +19,9 @@
     discoveredLetters = discoveredLetters;
 
     if (discoveredLetters.length === wordLetters.length) {
-      success = true;
-
       setTimeout(() => {
         dispatch("endMiniGame");
       }, 1500);
-
-      // setTimeout(() => {
-      //   console.log("suivaaant");
-      //   $miniGameIndex++;
-      // }, 1000);
     }
     console.log(discoveredLetters);
   };
@@ -39,9 +30,6 @@
 <div id="letters-game">
   <Word {wordLetters} {discoveredLetters} />
   <Letters {wordLetters} on:newLetter={handleNewLetter} />
-  <!-- {#if success}
-    <p>Bravo !!</p>
-  {/if} -->
 </div>
 
 <style>
