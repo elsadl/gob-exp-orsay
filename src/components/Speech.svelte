@@ -1,7 +1,8 @@
 <script>
   import gsap, { Power3 } from "gsap";
   import { afterUpdate, createEventDispatcher, onMount } from "svelte";
-
+  import { fade, fly } from 'svelte/transition';
+  import { expoInOut } from 'svelte/easing';
   import SpeechButton from "./SpeechButton.svelte";
 
   export let sentences;
@@ -9,13 +10,18 @@
   const dispatch = createEventDispatcher();
 
   $: count = 0;
+  $: visible = false;
 
   let tl = gsap.timeline();
 
+  onMount(() => {
+    console.log('mounted')
+    visible = true
+  })
+
   afterUpdate(() => {
     if (count === 0) {
-      console.log("condition????");
-      console.log(tl);
+      // console.log("condition????");
       // tl.from(".avatar", {
       //   y: "40",
       //   duration: 1,
@@ -59,9 +65,10 @@
   };
 </script>
 
+{#if visible}
 <section class="speech-container">
   <div>
-    <div class="speech">
+    <div class="speech" in:fly="{{ y: 40, duration: 900, delay: 350, easing: expoInOut }}">
       <p class="sentence">
         {#if sentences[count]}
           {#each sentences[count].text as item}
@@ -74,17 +81,18 @@
         {/if}
       </p>
     </div>
-    <div on:click={nextSentence}>
+    <div on:click={nextSentence} in:fly="{{ y: 40, duration: 900, delay: 550, easing: expoInOut }}">
       <SpeechButton>Continuer</SpeechButton>
     </div>
   </div>
-  <div class="avatar">
+  <div class="avatar"  in:fly="{{ y: 40, duration: 900, easing: expoInOut }}">
     <img src="/images/avatar/{sentences[count].emotion}.png" alt="" />
     {#if sentences[count].hand}
       <img src="/images/avatar/{sentences[count].hand}.png" alt="" />
     {/if}
   </div>
 </section>
+{/if}
 
 <style>
   .speech-container {
