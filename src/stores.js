@@ -56,6 +56,6 @@ export const explications = writable([
   },
 ]);
 
-export const miniGameIndex = writable(1);
+export const miniGameIndex = writable(0);
 
 export const passportOpen = writable(false);
