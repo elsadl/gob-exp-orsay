@@ -1,5 +1,5 @@
 <script>
-  import gsap, { Power3 } from 'gsap';
+  import gsap, { Power3 } from "gsap";
   import LaunchButton from "./components/LaunchButton.svelte";
 
   export let options;
@@ -7,7 +7,7 @@
   let current = options[0];
   // let current = options[1];
 
-  $: started = false
+  $: started = false;
 
   const startExp = () => {
     if (options[0].selected === true) options[0].selected = false;
@@ -16,29 +16,30 @@
   };
 
   const start = () => {
-
-    gsap.to('.portal', {
-        opacity: 0,
-        duration: 1.25,
-        ease: Power3.easeOut,
-    })
+    gsap.to(".portal", {
+      opacity: 0,
+      duration: 1.25,
+      ease: Power3.easeOut,
+    });
 
     setTimeout(() => {
-      started = true
+      started = true;
     }, 1250);
-  }
+  };
 </script>
 
 {#if !started}
   <div class="portal">
-    <span on:click={start}>Entrer</span>
+    <span on:click={start}>Commencer</span>
   </div>
 {:else}
   <main>
     {#if current.selected === true && current.name === "Landing"}
       <svelte:component this={current.component} />
-      <LaunchButton on:start={startExp}>Rencontrer le <span class="prof">professeur</span></LaunchButton>
-      <img class="logo" src="./images/orsay-gobelins.png" alt="">
+      <LaunchButton on:start={startExp}
+        >Rencontrer le <span class="prof">professeur</span></LaunchButton
+      >
+      <img class="logo" src="./images/orsay-gobelins.png" alt="" />
     {:else if current.selected === true && current.name === "Game"}
       <svelte:component this={current.component} />
     {/if}
@@ -84,6 +85,6 @@
   }
 
   .prof {
-    color: #F73132;
+    color: #f73132;
   }
 </style>

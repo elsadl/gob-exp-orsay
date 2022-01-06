@@ -41,23 +41,20 @@
 
   let startDetection = (e) => {
     // si on appuie sur le tracé actif, on lance le tracé
-    if (e.pointerType === "touch" && e.target.id === "svg") {
-      tracing = true;
-      lines[index].startingPoint = [e.clientX, e.clientY];
+    if (e.pointerType === "touch") {
+      if (e.target.id === "svg") {
+        tracing = true;
+        lines[index].startingPoint = [e.clientX, e.clientY];
+      }
     } else {
       if (e.path[0].id === "modele-" + lines[index].id) {
         tracing = true;
         lines[index].startingPoint = [e.clientX, e.clientY];
       }
     }
-    console.log("start");
-    console.log(e);
   };
 
   let stopDetection = (e) => {
-    console.log("stop");
-    console.log(e);
-
     // si on arrête d'appuyer, on stoppe le tracé
     if (tracing) {
       tracing = false;
@@ -76,10 +73,8 @@
   };
 
   let traceLine = (e) => {
-    console.log("move");
-    console.log(e);
+    // on calcule la distance par rapport au point précédent
     if (tracing) {
-      // on calcule la distance par rapport au point précédent
       previousPoint = currentPoint ? currentPoint : [e.clientX, e.clientY];
       currentPoint = [e.clientX, e.clientY];
       const dist = distance(previousPoint, currentPoint);
