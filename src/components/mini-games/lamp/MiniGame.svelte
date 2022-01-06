@@ -41,7 +41,7 @@
 
   let startDetection = (e) => {
     // si on appuie sur le tracé actif, on lance le tracé
-    if (pointerType === "touch" && e.target.id === "svg") {
+    if (e.pointerType === "touch" && e.target.id === "svg") {
       tracing = true;
       lines[index].startingPoint = [e.clientX, e.clientY];
     } else {
