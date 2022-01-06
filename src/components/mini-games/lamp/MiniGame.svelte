@@ -42,11 +42,15 @@
   let startDetection = (e) => {
     console.log("start");
     console.log(e);
+    
     // si on appuie sur le tracé actif, on lance le tracé
+    // if (pointerType === "touch") {
+    // } else {
     if (e.path[0].id === "modele-" + lines[index].id) {
       tracing = true;
       lines[index].startingPoint = [e.clientX, e.clientY];
     }
+    // }
   };
 
   let stopDetection = (e) => {
@@ -71,8 +75,8 @@
   };
 
   let traceLine = (e) => {
-    console.log("move")
-    console.log(e)
+    console.log("move");
+    console.log(e);
     if (tracing) {
       // on calcule la distance par rapport au point précédent
       previousPoint = currentPoint ? currentPoint : [e.clientX, e.clientY];
@@ -89,12 +93,7 @@
   };
 </script>
 
-<svelte:window
-  on:pointermove={traceLine}
-  on:touchmove={traceLine}
-  on:pointerup={stopDetection}
-  on:touchend={stopDetection}
-/>
+<svelte:window on:pointermove={traceLine} on:pointerup={stopDetection} />
 
 <div>
   <!-- svelte-ignore a11y-pointer-events-have-key-events -->
@@ -105,7 +104,6 @@
     id="svg"
     viewBox="0 0 547.1 490"
     on:pointerdown={startDetection}
-    on:touchstart={startDetection}
   >
     <Lamp />
     {#each lines as line (line.id)}
