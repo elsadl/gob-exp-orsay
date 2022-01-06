@@ -47,8 +47,7 @@
     .letter {
         cursor: pointer;
         text-align: center;
-        margin: 30px;
-        font-family: "Vulf Regular";
+        font-family: "Vulf";
         font-size: 2.5rem;
         font-weight: 500;
     }

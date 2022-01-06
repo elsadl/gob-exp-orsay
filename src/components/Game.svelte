@@ -36,7 +36,7 @@
   {/if}
 
   <div class="nav">
-    <Button icon={"map"} handleClick={handlePassClick} />
+    <Button icon={"passport"} handleClick={handlePassClick} />
   </div>
 
   {#if isPassport.selected === true}
@@ -57,7 +57,7 @@
 
   .nav {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 42px;
+    right: 42px;
   }
 </style>

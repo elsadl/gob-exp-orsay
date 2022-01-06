@@ -69,3 +69,8 @@ button:not(:disabled):active {
 button:focus {
 	border-color: #666;
 }
+
+.found {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 0px #D7CEC8;
+}

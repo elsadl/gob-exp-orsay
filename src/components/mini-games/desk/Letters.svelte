@@ -4,6 +4,7 @@
   export let wordLetters;
 
   let letters = [
+    "C",
     "E",
     "T",
     "H",
@@ -13,7 +14,6 @@
     "R",
     "A",
     "Ê",
-    "I",
     "B",
     "J",
     "O",
@@ -31,8 +31,9 @@
   #letters-grid {
     width: 680px;
     margin: 0 auto;
-    padding-top: 84px;
+    padding-top: 56px;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    row-gap: 25px;
   }
 </style>

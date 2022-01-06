@@ -86,7 +86,6 @@
 
 <style>
   section {
-    /* visibility: hidden; */
     position: relative;
     font-size: 1.25em;
   }
