@@ -1,35 +1,45 @@
 <script>
-  import { miniGames, miniGameIndex } from "../stores";
+  import { miniGames, passportOpen } from "../stores";
 
   import Stamp from "./stamps/Stamp.svelte";
   import StampPlaceholder from "./stamps/StampPlaceholder.svelte";
-  import Slider from "./stamps/Slider.svelte"
-
-  console.log($miniGames, $miniGameIndex);
+  import Slider from "./stamps/Slider.svelte";
+  import Button from "./Button.svelte";
 
   $: slider = false;
   $: id = null;
 
   const handleShowArtwork = (event) => {
-    console.log('HEEEEERE MSF')
-    slider = true
-    id = event.detail.id
-  }
+    console.log("HEEEEERE MSF");
+    slider = true;
+    id = event.detail.id;
+  };
 
+  const togglePassport = () => {
+    $passportOpen = !$passportOpen;
+  };
 </script>
 
 <div class="passport">
+  <div class="close-btn">
+    <Button icon={"close"} handleClick={togglePassport} />
+  </div>
+
   {#if !slider}
     <div class="stamp-container">
       {#each $miniGames as miniGame}
         {#if miniGame.success}
-          <Stamp stamp={miniGame} id={miniGame.id} on:showArtwork={handleShowArtwork}/>
+          <Stamp
+            stamp={miniGame}
+            id={miniGame.id}
+            on:showArtwork={handleShowArtwork}
+          />
         {:else}
           <StampPlaceholder />
         {/if}
       {/each}
-      <StampPlaceholder id="3" />
-      <StampPlaceholder id="4" />
+      <StampPlaceholder />
+      <StampPlaceholder />
     </div>
   {:else}
     <Slider {miniGames} {id} />
@@ -43,12 +53,17 @@
     position: absolute;
     z-index: 1;
     border-radius: 10px 40px 10px 10px;
-    border: 1px solid #7B756D;
+    border: 1px solid #7b756d;
     background-color: white;
-
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 32px;
+    right: 32px;
   }
 
   .stamp-container {

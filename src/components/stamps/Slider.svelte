@@ -99,8 +99,8 @@
   }
 
   .unachieved {
-    background: url('/images/undiscoverd-stamp.png') center no-repeat;
-    background-size: cover;
+    background: url('/images/stamps/undiscovered.png') center no-repeat;
+    background-size: contain;
   }
 
   .diseabled {

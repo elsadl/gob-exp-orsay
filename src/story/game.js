@@ -2,12 +2,12 @@ export const game = [
     {
       clue: [
         {
-          text: "Misère ! J’ai probablement laissé mon cahier dans le bureau de mon ami...",
+          text: "Misère ! Je l'ai probablement laissé dans le bureau de mon ami...",
           emotion: "worried",
           hand: "",
         },
         {
-          text: "Quel ami ? Le génial Henry van de Velde !",
+          text: "Quel ami ? Le génial Henry Van de Velde !",
           emotion: "satisfied",
           hand: "pointing",
         },

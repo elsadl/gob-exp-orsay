@@ -79,13 +79,13 @@ button:focus {
 }
 
 .desk-success {
-  background: url('/images/bureau.png') center no-repeat;
-  background-size: cover;
+  background: url('/images/stamps/desk.png') center no-repeat;
+  background-size: contain;
 } 
 
 .lamp-success {
-  background: url('/images/lampe.png') center no-repeat;
-  background-size: cover;
+  background: url('/images/stamps/lamp.png') center no-repeat;
+  background-size: contain;
 } 
 
 div[data-current="true"] {

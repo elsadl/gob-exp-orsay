@@ -32,28 +32,30 @@ export const miniGames = writable([
 export const explications = writable([
   {
     id: "1",
-    title: "Titre de l'oeuvre 1",
+    title: "Le bureau d'Henry Van de Velde",
     paragraph:
-      "Texte explicatif sur l’oeuvre 1. Il permet à l’utilisateur de re découvrir l’oeuvre en apprenant son histoire.",
+      "Texte explicatif sur l'œuvre. Il permet à l’utilisateur de re-découvrir l'œuvre en apprenant son histoire.",
   },
   {
     id: "2",
-    title: "Titre de l'oeuvre 2",
+    title: "La lampe nénuphar de Louis Majorelle",
     paragraph:
-      "Texte explicatif sur l’oeuvre 2. Il permet à l’utilisateur de re découvrir l’oeuvre en apprenant son histoire.",
+      "Texte explicatif sur l'œuvre. Il permet à l’utilisateur de re-découvrir l'œuvre en apprenant son histoire.",
   },
   {
     id: "4",
     title: "Titre de l'oeuvre 3",
     paragraph:
-      "Texte explicatif sur l’oeuvre 3. Il permet à l’utilisateur de re découvrir l’oeuvre en apprenant son histoire.",
+      "Texte explicatif sur l'œuvre. Il permet à l’utilisateur de re-découvrir l'œuvre en apprenant son histoire.",
   },
   {
     id: "4",
     title: "Titre de l'oeuvre 4",
     paragraph:
-      "Texte explicatif sur l’oeuvre 4. Il permet à l’utilisateur de re découvrir l’oeuvre en apprenant son histoire.",
+      "Texte explicatif sur l'œuvre. Il permet à l’utilisateur de re-découvrir l'œuvre en apprenant son histoire.",
   },
 ]);
 
-export const miniGameIndex = writable(0);
+export const miniGameIndex = writable(1);
+
+export const passportOpen = writable(false);

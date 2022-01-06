@@ -3,8 +3,6 @@
   import Word from "./Word.svelte";
   import Letters from "./Letters.svelte";
 
-  import { miniGameIndex } from "../../../stores";
-
   import { createEventDispatcher } from "svelte";
   const dispatch = createEventDispatcher();
 

@@ -17,7 +17,7 @@
         ".stamp",
         {
           y: "-230",
-          x: "230",
+          x: "280",
           scale: 0.5,
           duration: 0.6,
           opacity: 0,

@@ -1,13 +1,12 @@
 <div>
-    
 </div>
 
 <style>
   div {
-    width: 175px;
-    height: 234px;
-    background: url('/images/undiscoverd-stamp.png') center no-repeat;
-    background-size: cover;
+    width: 210px;
+    height: 230px;
+    background: url('/images/stamps/undiscovered.png') center no-repeat;
+    background-size: contain;
     /* opacity: .35; */
     /* filter: drop-shadow(5px 5px 5px); */
   }

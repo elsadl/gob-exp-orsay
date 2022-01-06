@@ -1,14 +1,40 @@
 export const intro = {
-  sentences: [
-    {
-      text: "Intro écran un. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus!",
-      emotion: "smile",
-      hand: null,
-    },
-    {
-      text: "Intro écran deux. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laudantium accusamus voluptatem minus!",
-      emotion: "smile",
-      hand: "pointing",
-    },
-  ],
-};
+    sentences: [
+      {
+        text: "Oof ! L'atterrissage n'a pas été douillet aujourd'hui... Suis-je enfin au bon endroit ?",
+        emotion: "frowning",
+        hand: "thinking",
+      },
+      {
+        text: "Désolé, j'ai dû te surprendre ! Mais puisque tu es ici, accepterais-tu de m'assister dans mes recherches ?",
+        emotion: "smile",
+        hand: "thinking",
+      },
+      {
+        text: "C'est la chance d'une vie ! Je suis le génialissime explorateur Gill, qui voyage à travers les différents courants artistiques qui ont marqué le monde !",
+        emotion: "satisfied",
+        hand: "pointing",
+      },
+      {
+        text: "J’écris actuellement un livre qui regroupe en détail le résultat de mes observations et études sur l’art.",
+        emotion: "smile",
+        hand: "",
+      },
+      {
+        text: "Tu m'as l'air d'avoir l'esprit vif et de l'énergie à revendre. Alors mettons-nous au travail !",
+        emotion: "smile",
+        hand: "pointing",
+      },
+      {
+        text: "Voici ton passeport. Il te servira lorsque nous traverserons les différents courants.",
+        emotion: "satisfied",
+        hand: null,
+      },
+      {
+        text: "Maintenant que c’est fait, il faut que je te parle de... Deux secondes. Je ne trouve plus mon carnet.",
+        emotion: "happy",
+        hand: "thinking",
+      },
+    ],
+  };
+  

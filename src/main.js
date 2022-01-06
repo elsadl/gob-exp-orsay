@@ -12,11 +12,6 @@ const app = new App({
       { selected: false, name: "Landing", component: Landing },
       { selected: true, name: "Game", component: Game },
     ],
-    navBtn: [{
-        selected: false,
-        name: "Passport",
-        component: Passport,
-      }],
   },
 });
 

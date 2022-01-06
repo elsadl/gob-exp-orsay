@@ -69,6 +69,7 @@
 <style>
   .mini-game-container {
     height: 670px;
+    width: 926px;
     overflow: hidden;
     display: grid;
     align-items: center;

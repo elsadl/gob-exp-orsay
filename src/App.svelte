@@ -1,6 +1,5 @@
 <script>
   export let options;
-  export let navBtn;
 
   // let current = options[0];
   let current = options[1];
@@ -17,7 +16,7 @@
     <svelte:component this={current.component} />
     <button class="start-cta" on:click={startExp}> Start experience </button>
   {:else if current.selected === true && current.name === "Game"}
-    <svelte:component this={current.component} {navBtn} />
+    <svelte:component this={current.component} />
   {/if}
 </main>
 
