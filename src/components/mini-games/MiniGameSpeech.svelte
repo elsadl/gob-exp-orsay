@@ -1,8 +1,12 @@
 <script>
+  import { miniGameIndex } from "./../../stores";
+
+  let miniGame = miniGameIndex === 0 ? "desk" : "lamp";
+
   export let question;
 </script>
 
-<section class="speech-container">
+<section class="{miniGame} speech-container">
   <div class="speech">
     <p class="sentence">
       {question.text}
@@ -21,6 +25,10 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 90px;
+  }
+
+  .speech-container.lamp {
+    top: 80px;
   }
 
   .speech {

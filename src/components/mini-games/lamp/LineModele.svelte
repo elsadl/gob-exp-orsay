@@ -11,7 +11,10 @@
 
 <style>
   .modele {
-    stroke-width: 10px;
-    stroke: rgba(0, 0, 0, 0.1);
+    stroke-width: 8px;
+    stroke: #f73132;
+    stroke-dasharray: 20px;
+    stroke-linecap: round;
+    cursor: pointer;
   }
 </style>

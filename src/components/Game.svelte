@@ -10,7 +10,7 @@
 
   let isPassport = navBtn[0];
   // dév !!! à repasser à true;
-  $: isIntro = false;
+  $: isIntro = true;
 
   $: sentences = [...sentencesGroupe];
 
@@ -51,8 +51,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: calc(100vh - 8px);
-    width: 100%;
+    height: 670px;
+    width: 926px;
     position: relative;
   }
 

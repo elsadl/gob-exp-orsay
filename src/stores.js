@@ -27,4 +27,4 @@ export const miniGames = writable([
   },
 ]);
 
-export const miniGameIndex = writable(0);
+export const miniGameIndex = writable(1);

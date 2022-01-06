@@ -9,8 +9,8 @@
   const gameLoop = ["clue", "question", "mini-game", "answer", "stamp"];
 
   // DÉV !! à repasser à 0
-  // $: loopIndex = 0;
-  $: loopIndex = 4;
+  $: loopIndex = 0;
+  // $: loopIndex = 4;
 
   $: activeGame = $miniGames[$miniGameIndex];
 

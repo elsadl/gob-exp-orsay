@@ -14,8 +14,9 @@
 
 <style>
   .drawing {
-    stroke-width: 2px;
-    stroke: red;
+    stroke-width: 8px;
+    stroke: #F73132;
+    stroke-linecap: round;
     pointer-events: none;
   }
 </style>
