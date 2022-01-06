@@ -40,7 +40,7 @@
   };
 </script>
 
-<div>
+<div class="mini-game-container">
   {#if !conclusion}
     {#if sentences.length > 0}
       {#if status === "mini-game"}
@@ -65,3 +65,13 @@
     <p>conclu</p>
   {/if}
 </div>
+
+<style>
+  .mini-game-container {
+    height: 670px;
+    overflow: hidden;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+</style>

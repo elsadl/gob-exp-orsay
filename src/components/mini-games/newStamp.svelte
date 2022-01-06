@@ -71,7 +71,7 @@
       </div>
     </div>
     <div class="avatar">
-      <img src="/images/Amigos.png" alt="" />
+      <img src="/images/avatar/{game.sentence.emotion}.png" alt="" />
     </div>
   </section>
 </div>

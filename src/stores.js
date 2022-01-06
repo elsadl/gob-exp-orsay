@@ -10,9 +10,9 @@ export const miniGames = writable([
     name: "desk",
     success: false,
     sentence: {
-      text: "Ah merci beaucoup ! Sans ce carnet, j'aurais été incapable de terminer mon ouvrage. Pour te récompenser, je t'offre ce timbre inspiré de l'Art Nouveau.",
-      emotion: "smile",
-      hand: null,
+      text: "Pour te récompenser, je t’offre ce timbre inspiré du courant Art Nouveau.",
+      emotion: "satisfied",
+      hand: "",
     },
     component: DeskMiniGame,
   },
@@ -21,7 +21,7 @@ export const miniGames = writable([
     name: "lamp",
     success: false,
     sentence: {
-      text: "Quel beau travail ! Je te dois une fière chandelle. Tiens, prends ce timbre en échange !",
+      text: "Tiens, prends ce timbre en échange !",
       emotion: "smile",
       hand: null,
     },
@@ -33,23 +33,27 @@ export const explications = writable([
   {
     id: "1",
     title: "Titre de l'oeuvre 1",
-    paragraph: "Texte explicatif sur l’oeuvre 1. Il permet à l’utilisateur de re découvrir l’oeuvre en apprenant son histoire."
+    paragraph:
+      "Texte explicatif sur l’oeuvre 1. Il permet à l’utilisateur de re découvrir l’oeuvre en apprenant son histoire.",
   },
   {
     id: "2",
     title: "Titre de l'oeuvre 2",
-    paragraph: "Texte explicatif sur l’oeuvre 2. Il permet à l’utilisateur de re découvrir l’oeuvre en apprenant son histoire."
+    paragraph:
+      "Texte explicatif sur l’oeuvre 2. Il permet à l’utilisateur de re découvrir l’oeuvre en apprenant son histoire.",
   },
   {
     id: "4",
     title: "Titre de l'oeuvre 3",
-    paragraph: "Texte explicatif sur l’oeuvre 3. Il permet à l’utilisateur de re découvrir l’oeuvre en apprenant son histoire."
+    paragraph:
+      "Texte explicatif sur l’oeuvre 3. Il permet à l’utilisateur de re découvrir l’oeuvre en apprenant son histoire.",
   },
   {
     id: "4",
     title: "Titre de l'oeuvre 4",
-    paragraph: "Texte explicatif sur l’oeuvre 4. Il permet à l’utilisateur de re découvrir l’oeuvre en apprenant son histoire."
-  }
-])
+    paragraph:
+      "Texte explicatif sur l’oeuvre 4. Il permet à l’utilisateur de re découvrir l’oeuvre en apprenant son histoire.",
+  },
+]);
 
 export const miniGameIndex = writable(0);

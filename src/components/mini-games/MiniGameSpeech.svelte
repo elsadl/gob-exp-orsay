@@ -12,8 +12,9 @@
       {question.text}
     </p>
   </div>
-  <!-- remplacer par avatar thinking ici -->
-  <img class="avatar" src="/images/Amigos.png" alt="" />
+  <div class="avatar">
+    <img src="/images/avatar/minigame.png" alt="" />
+  </div>
 </section>
 
 <style>
@@ -24,11 +25,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 40px;
   }
 
   .speech-container.lamp {
-    top: 80px;
+    top: 60px;
   }
 
   .speech {
@@ -51,6 +51,6 @@
   .avatar {
     position: relative;
     left: -40px;
-    height: 150px;
   }
+
 </style>

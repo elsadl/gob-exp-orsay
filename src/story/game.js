@@ -1,84 +1,90 @@
 export const game = [
-  {
-    clue: [
-      {
-        text: "Clue desk écran un. Clue desk écran un. Clue desk écran un. Clue desk écran un.",
-        emotion: "smile",
-        hand: "",
-      },
-      {
-        text: "Clue desk écran deux. Clue desk écran deux. Clue desk écran deux. Clue desk écran deux.",
-        emotion: "smile",
-        hand: "",
-      },
-    ],
-    question: [
-      {
-        text: "Question desk écran un. Question desk écran un. Question desk écran un. Question desk écran un.",
-        emotion: "smile",
-        hand: "",
-      },
-      {
-        text: "Question desk écran deux. Question desk écran deux. Question desk écran deux. Question desk écran deux.",
-        emotion: "smile",
-        hand: "",
-      },
-    ],
-    "mini-game": [
-      {
-        text: "Quel est le bois que Henry Van de Velde a utilisé pour concevoir son bureau ?",
-        emotion: "frown",
-        hand: "thinking",
-      },
-    ],
-    stamp: [],
-    answer: [
-      {
-        text: "Answser desk écran un. Answser desk écran un. Answser desk écran un. Answser desk écran un.",
-        emotion: "smile",
-        hand: "thinking",
-      },
-    ],
-  },
-  {
-    clue: [
-      {
-        text: "Clue lampe écran un. Clue lampe écran un. Clue lampe écran un. Clue lampe écran un.",
-        emotion: "smile",
-        hand: "",
-      },
-      {
-        text: "Clue lampe écran deux. Clue lampe écran deux. Clue lampe écran deux. Clue lampe écran deux.",
-        emotion: "smile",
-        hand: "",
-      },
-    ],
-    question: [
-      {
-        text: "Question lampe écran un. Question lampe écran un. Question lampe écran un. Question lampe écran un.",
-        emotion: "smile",
-        hand: "",
-      },
-      {
-        text: "Question lampe écran deux. Question lampe écran deux. Question lampe écran deux. Question lampe écran deux.",
-        emotion: "smile",
-        hand: "",
-      },
-    ],
-    "mini-game": [
-      {
-        text: "Quel est le bois que Henry Van de Velde a utilisé pour concevoir son bureau ?",
-        emotion: "frown",
-        hand: "thinking",
-      },
-    ],
-    stamp: [],
-    answer: [
-      {
-        text: "Answser lampe écran un. Answser lampe écran un. Answser lampe écran un. Answser lampe écran un.",
-        emotion: "smile",
-        hand: "thinking",
-      },
-    ],
-  },
-];
+    {
+      clue: [
+        {
+          text: "Misère ! J’ai probablement laissé mon cahier dans le bureau de mon ami...",
+          emotion: "worried",
+          hand: "",
+        },
+        {
+          text: "Quel ami ? Le génial Henry van de Velde !",
+          emotion: "satisfied",
+          hand: "pointing",
+        },
+      ],
+      question: [
+        {
+          text: "Quel est le bois que Henry Van de Velde a utilisé pour concevoir son bureau ?",
+          emotion: "smile",
+          hand: "thinking",
+        },
+      ],
+      "mini-game": [
+        {
+          text: "Quel est le bois que Henry Van de Velde a utilisé pour concevoir son bureau ?",
+          emotion: "smile",
+          hand: "thinking",
+        },
+      ],
+      stamp: [],
+      answer: [
+        {
+          text: "Ah, merci beaucoup ! Sans ce carnet, j’aurais été incapable de terminer mon ouvrage !",
+          emotion: "happy",
+          hand: "pointing",
+        },
+      ],
+    },
+    {
+      clue: [
+        {
+          text: "Si je me souviens bien, il y a une lampe nénuphar non loin d’ici.",
+          emotion: "smile",
+          hand: "thinking",
+        },
+        {
+          text: "Elle a été conçue par un ébéniste et décorateur de renom, Louis Majorelle. Il a toujours trouvé son inspiration dans la nature, et je t’avoue que j’ai un faible pour les belles choses.",
+          emotion: "smile",
+          hand: "",
+        },
+        {
+          text: "Travailler entouré de beauté est un luxe.",
+          emotion: "satisfied",
+          hand: "pointing",
+        },
+        {
+          text: "Allons la chercher ! Elle nous sera utile si on veut déchiffrer mes notes.",
+          emotion: "smile",
+          hand: "",
+        },
+      ],
+      question: [
+        {
+          text: "Quelle tristesse ! La lampe est fragmentée. Pourrais-tu m’aider à la réparer  ?",
+          emotion: "worried",
+          hand: "",
+        },
+        {
+          text: "J’ai tracé les jonctions, il te suffit d’y appliquer la colle.",
+          emotion: "smile",
+          hand: "thinking",
+        },
+      ],
+      "mini-game": [
+        {
+          text: "J’ai tracé les jonctions, il te suffit d’y appliquer la colle.",
+          emotion: "smile",
+          hand: "thinking",
+        },
+      ],
+      stamp: [],
+      answer: [
+        {
+          text: "Nous avons réussi ! Félicitations !",
+          emotion: "happy",
+          hand: "",
+        },
+      ],
+    },
+  ];
+  

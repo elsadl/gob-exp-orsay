@@ -35,6 +35,5 @@
     flex-direction: column;
     height: 670px;
     width: 926px;
-    overflow: hidden;
   }
 </style>

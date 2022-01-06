@@ -12,10 +12,6 @@
 
   let tl = gsap.timeline();
 
-  // onMount(() => {
-
-  // })
-
   afterUpdate(() => {
     if (count === 0) {
       console.log("condition????");
@@ -68,13 +64,13 @@
     <div class="speech">
       <p class="sentence">
         {#if sentences[count]}
-          <!-- {#each sentences[count].text as item}
+          {#each sentences[count].text as item}
             {#if item === " "}
               <span class="char space" />
-            {:else} -->
-              <span class="char">{@html sentences[count].text}</span>
-            <!-- {/if} -->
-          <!-- {/each} -->
+            {:else}
+              <span class="char">{@html item}</span>
+            {/if}
+          {/each}
         {/if}
       </p>
     </div>
@@ -83,11 +79,9 @@
     </div>
   </div>
   <div class="avatar">
-    <img :class={sentences[count].emotion} src="/images/Amigos.png" alt="" />
+    <img src="/images/avatar/{sentences[count].emotion}.png" alt="" />
     {#if sentences[count].hand}
-      <!-- à finir quand on aura les assets -->
-      <p class="avatar-hand">{sentences[count].hand}</p>
-      <!-- <img :class={sentences[count].hand} src="/images/Amigos.png" alt="" /> -->
+      <img src="/images/avatar/{sentences[count].hand}.png" alt="" />
     {/if}
   </div>
 </section>
@@ -127,13 +121,13 @@
     will-change: transform;
     /* padding-right: 8px; */
   }
-
   .avatar {
     position: relative;
     left: -40px;
+    display: grid;
   }
 
-  .avatar-hand {
-    position: absolute;
+  .avatar img {
+    grid-area: 1 / -1;
   }
 </style>
