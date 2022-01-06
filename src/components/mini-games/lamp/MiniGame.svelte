@@ -40,6 +40,7 @@
   });
 
   let startDetection = (e) => {
+    console.log(e);
     // si on appuie sur le tracé actif, on lance le tracé
     if (e.path[0].id === "modele-" + lines[index].id) {
       tracing = true;
