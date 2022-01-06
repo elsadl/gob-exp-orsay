@@ -53,7 +53,7 @@
     transform: translate(-50%, -50%);
   }
 
-  p {
+  /* p {
     text-align: center;
-  }
+  } */
 </style>
