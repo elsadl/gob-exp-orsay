@@ -26,12 +26,7 @@ export const intro = {
         hand: "pointing",
       },
       {
-        text: "Voici ton passeport. Il te servira lorsque nous traverserons les différents courants.",
-        emotion: "satisfied",
-        hand: null,
-      },
-      {
-        text: "Maintenant que c’est fait, il faut que je te parle de... Deux secondes. Je ne trouve plus mon carnet.",
+        text: "Ah, attends... Deux secondes. Je ne trouve plus mon carnet...",
         emotion: "happy",
         hand: "thinking",
       },
