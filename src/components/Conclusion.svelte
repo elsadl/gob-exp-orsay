@@ -8,7 +8,7 @@
 </script>
 
 <div class="conclusion">
-  <h2>Oh oh cette section est toujours en construction !</h2>
+  <h2>Oh oh, cette section est encore en construction !</h2>
 
   <div class="stamp-container">
     {#each $miniGames as miniGame}
@@ -22,8 +22,7 @@
     <div class="undiscovered-stamp"></div>
   </div>
   
-
-  <p>Reviens plus tard pour finir de collecter tous les timbres et découvrir le chapitre suivant !</p>
+  <p>Reviens plus tard pour finir de collecter tous les timbres<br> et découvrir le chapitre suivant !</p>
 
   <EndButton on:end={restart}>Recommencer</EndButton>
 </div>
@@ -64,7 +63,7 @@
   }
 
   .undiscovered-stamp {
-    background: url('/images/stamps/undiscovered-2.png') center no-repeat;
+    background: url('/images/stamps/placeholder.png') center no-repeat;
     background-size: contain;
   }
 

@@ -82,7 +82,7 @@
       </p>
     </div>
     <div on:click={nextSentence} in:fly="{{ y: 40, duration: 900, delay: 550, easing: expoInOut }}">
-      <SpeechButton>Continuer</SpeechButton>
+      <SpeechButton>{sentences[count].button ? sentences[count].button : "Continuer"}</SpeechButton>
     </div>
   </div>
   <div class="avatar"  in:fly="{{ y: 40, duration: 900, easing: expoInOut }}">

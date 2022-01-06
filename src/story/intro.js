@@ -1,17 +1,18 @@
 export const intro = {
     sentences: [
       {
-        text: "Oof ! L'atterrissage n'a pas été douillet aujourd'hui... Suis-je enfin au bon endroit ?",
+        text: "Oof ! L'atterrissage n'a pas été douillet aujourd'hui... Suis-je enfin au bon endroit ?",
         emotion: "frowning",
         hand: "thinking",
       },
       {
-        text: "Désolé, j'ai dû te surprendre ! Mais puisque tu es ici, accepterais-tu de m'assister dans mes recherches ?",
+        text: "Désolé, j'ai dû te surprendre ! Mais puisque tu es ici, accepterais-tu de m'assister dans mes recherches ?",
         emotion: "smile",
         hand: "thinking",
+        button: "Accepter",
       },
       {
-        text: "C'est la chance d'une vie ! Je suis le génialissime explorateur Gill, qui voyage à travers les différents courants artistiques qui ont marqué le monde !",
+        text: "C'est la chance d'une vie ! Je suis le génialissime explorateur Gill, qui voyage à travers les différents courants artistiques qui ont marqué le monde !",
         emotion: "satisfied",
         hand: "pointing",
       },

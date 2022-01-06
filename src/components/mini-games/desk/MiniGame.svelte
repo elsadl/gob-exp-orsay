@@ -21,7 +21,7 @@
       setTimeout(() => {
         gsap
         .to('.guess-letter', {
-          y: -30, 
+          y: -40, 
           duration: .4, 
           stagger: {
             each: 0.05,
@@ -31,7 +31,7 @@
         })
         gsap.to('.guess-letter', {
           y: 0, 
-          duration: .4, 
+          duration: .2, 
           stagger: {
             each: 0.02,
             from: "start"
