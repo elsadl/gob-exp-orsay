@@ -82,7 +82,12 @@
   };
 </script>
 
-<svelte:window on:pointermove={traceLine} on:pointerup={stopDetection} />
+<svelte:window
+  on:pointermove={traceLine}
+  on:touchmove={traceLine}
+  on:pointerup={stopDetection}
+  on:touchend={stopDetection}
+/>
 
 <div>
   <!-- svelte-ignore a11y-pointer-events-have-key-events -->
@@ -93,11 +98,12 @@
     id="svg"
     viewBox="0 0 547.1 490"
     on:pointerdown={startDetection}
+    on:touchstart={startDetection}
   >
     <Lamp />
     {#each lines as line (line.id)}
-      <LineModele {line} active={line.id === index+1} />
-      <LineDrawing {line} active={line.id === index+1} />
+      <LineModele {line} active={line.id === index + 1} />
+      <LineDrawing {line} active={line.id === index + 1} />
     {/each}
   </svg>
 </div>
