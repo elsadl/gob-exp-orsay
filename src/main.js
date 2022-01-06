@@ -9,8 +9,8 @@ const app = new App({
   props: {
     options: [
       // DÉV !! échanger true/false 
-      { selected: false, name: "Landing", component: Landing },
-      { selected: true, name: "Game", component: Game },
+      { selected: true, name: "Landing", component: Landing },
+      { selected: false, name: "Game", component: Game },
     ],
   },
 });

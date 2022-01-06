@@ -71,13 +71,13 @@
     <div class="speech" in:fly="{{ y: 40, duration: 900, delay: 350, easing: expoInOut }}">
       <p class="sentence">
         {#if sentences[count]}
-          {#each sentences[count].text as item}
+          <!-- {#each sentences[count].text as item}
             {#if item === " "}
               <span class="char space" />
-            {:else}
-              <span class="char">{@html item}</span>
-            {/if}
-          {/each}
+            {:else} -->
+              <span class="char">{@html sentences[count].text}</span>
+            <!-- {/if}
+          {/each} -->
         {/if}
       </p>
     </div>
@@ -118,10 +118,6 @@
     line-height: 1.25;
     margin: 0;
     font-size: 1em;
-  }
-
-  .space {
-    padding-right: 8px;
   }
 
   .char {
