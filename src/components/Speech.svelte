@@ -20,7 +20,7 @@
   afterUpdate(() => {
     if (count === 0) {
       console.log("condition????");
-      console.log(tl)
+      console.log(tl);
       // tl.from(".avatar", {
       //   y: "40",
       //   duration: 1,
@@ -48,11 +48,11 @@
   });
 
   const nextSentence = () => {
-    console.log("next sentence")
+    console.log("next sentence");
 
     // if (!tl.isActive()) {
     //   tl.play();
-      count += 1;
+    count += 1;
     // } else if (tl.isActive()) {
     //   tl.progress(1).pause();
     // }
@@ -64,30 +64,41 @@
   };
 </script>
 
-<section>
-  <div class="speech">
-    <p class="sentence">
-      {#if sentences[count]}
-        {#each sentences[count] as item}
-          {#if item === " "}
-            <span class="char space" />
-          {:else}
-            <span class="char">{@html item}</span>
-          {/if}
-        {/each}
-      {/if}
-    </p>
+<section class="speech-container">
+  <div>
+    <div class="speech">
+      <p class="sentence">
+        {#if sentences[count]}
+          {#each sentences[count].text as item}
+            {#if item === " "}
+              <span class="char space" />
+            {:else}
+              <span class="char">{@html item}</span>
+            {/if}
+          {/each}
+        {/if}
+      </p>
+    </div>
+    <div on:click={nextSentence}>
+      <SpeechButton>Continuer</SpeechButton>
+    </div>
   </div>
-  <div on:click={nextSentence}>
-    <SpeechButton>Continuer</SpeechButton>
+  <div class="avatar">
+    <img :class={sentences[count].emotion} src="/images/Amigos.png" alt="" />
+    {#if sentences[count].hand}
+      <!-- à finir quand on aura les assets -->
+      <p class="avatar-hand">{sentences[count].hand}</p>
+      <!-- <img :class={sentences[count].hand} src="/images/Amigos.png" alt="" /> -->
+    {/if}
   </div>
-  <img class="avatar" src="/images/Amigos.png" alt="" />
 </section>
 
 <style>
-  section {
+  .speech-container {
     position: relative;
+    left: 40px;
     font-size: 1.25em;
+    display: flex;
   }
 
   .speech {
@@ -119,8 +130,11 @@
   }
 
   .avatar {
+    position: relative;
+    left: -40px;
+  }
+
+  .avatar-hand {
     position: absolute;
-    right: -165px;
-    top: -10px;
   }
 </style>

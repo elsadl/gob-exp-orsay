@@ -1,9 +1,9 @@
 <script>
-import { afterUpdate } from "svelte";
-
   import { miniGames, miniGameIndex } from "../../stores";
   import { game } from "../../story/game";
+
   import Speech from "../Speech.svelte";
+  import MiniGameSpeech from "./MiniGameSpeech.svelte";
   import NewStamp from "./newStamp.svelte";
 
   const gameLoop = ["clue", "question", "mini-game", "answer", "stamp"];
@@ -18,11 +18,11 @@ import { afterUpdate } from "svelte";
     ? [...game[$miniGameIndex][status]]
     : null;
 
-    const handleStampCollected = () => {
-      activeGame.success = true;
-      $miniGames = [...$miniGames];
-      nextSequence();
-    }
+  const handleStampCollected = () => {
+    activeGame.success = true;
+    $miniGames = [...$miniGames];
+    nextSequence();
+  };
 
   const nextSequence = () => {
     if (loopIndex === gameLoop.length - 1) {
@@ -40,6 +40,17 @@ import { afterUpdate } from "svelte";
 
 <div>
   {#if !conclusion}
+    {#if sentences.length > 0}
+      {#if status === "mini-game"}
+        <section>
+          <MiniGameSpeech question={sentences[0]} />
+        </section>
+      {:else}
+        <section>
+          <Speech {sentences} on:endIntro={nextSequence} />
+        </section>
+      {/if}
+    {/if}
     {#if status === "mini-game"}
       <svelte:component
         this={activeGame.component}
@@ -47,11 +58,6 @@ import { afterUpdate } from "svelte";
       />
     {:else if status === "stamp"}
       <NewStamp game={activeGame} on:stampCollected={handleStampCollected} />
-    {/if}
-    {#if sentences.length > 0}
-      <section>
-        <Speech {sentences} on:endIntro={nextSequence} />
-      </section>
     {/if}
   {:else}
     <p>conclu</p>

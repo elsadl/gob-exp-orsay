@@ -1,34 +1,84 @@
 export const game = [
   {
     clue: [
-      "Clue desk écran un. Clue desk écran un. Clue desk écran un. Clue desk écran un.",
-      "Clue desk écran deux. Clue desk écran deux. Clue desk écran deux. Clue desk écran deux.",
+      {
+        text: "Clue desk écran un. Clue desk écran un. Clue desk écran un. Clue desk écran un.",
+        emotion: "smile",
+        hand: "",
+      },
+      {
+        text: "Clue desk écran deux. Clue desk écran deux. Clue desk écran deux. Clue desk écran deux.",
+        emotion: "smile",
+        hand: "",
+      },
     ],
     question: [
-      "Question desk écran un. Question desk écran un. Question desk écran un. Question desk écran un.",
-      "Question desk écran deux. Question desk écran deux. Question desk écran deux. Question desk écran deux.",
+      {
+        text: "Question desk écran un. Question desk écran un. Question desk écran un. Question desk écran un.",
+        emotion: "smile",
+        hand: "",
+      },
+      {
+        text: "Question desk écran deux. Question desk écran deux. Question desk écran deux. Question desk écran deux.",
+        emotion: "smile",
+        hand: "",
+      },
     ],
-    "mini-game": [],
+    "mini-game": [
+      {
+        text: "Quel est le bois que Henry Van de Velde a utilisé pour concevoir son bureau ?",
+        emotion: "frown",
+        hand: "thinking",
+      },
+    ],
     stamp: [],
     answer: [
-      "Answser desk écran un. Answser desk écran un. Answser desk écran un. Answser desk écran un.",
-      "Answser desk écran deux. Answser desk écran deux. Answser desk écran deux. Answser desk écran deux.",
+      {
+        text: "Answser desk écran un. Answser desk écran un. Answser desk écran un. Answser desk écran un.",
+        emotion: "smile",
+        hand: "thinking",
+      },
     ],
   },
   {
     clue: [
-      "Clue lampe écran un. Clue lampe écran un. Clue lampe écran un. Clue lampe écran un.",
-      "Clue lampe écran deux. Clue lampe écran deux. Clue lampe écran deux. Clue lampe écran deux.",
+      {
+        text: "Clue lampe écran un. Clue lampe écran un. Clue lampe écran un. Clue lampe écran un.",
+        emotion: "smile",
+        hand: "",
+      },
+      {
+        text: "Clue lampe écran deux. Clue lampe écran deux. Clue lampe écran deux. Clue lampe écran deux.",
+        emotion: "smile",
+        hand: "",
+      },
     ],
     question: [
-      "Question lampe écran un. Question lampe écran un. Question lampe écran un. Question lampe écran un.",
-      "Question lampe écran deux. Question lampe écran deux. Question lampe écran deux. Question lampe écran deux.",
+      {
+        text: "Question lampe écran un. Question lampe écran un. Question lampe écran un. Question lampe écran un.",
+        emotion: "smile",
+        hand: "",
+      },
+      {
+        text: "Question lampe écran deux. Question lampe écran deux. Question lampe écran deux. Question lampe écran deux.",
+        emotion: "smile",
+        hand: "",
+      },
     ],
-    "mini-game": [],
+    "mini-game": [
+      {
+        text: "Quel est le bois que Henry Van de Velde a utilisé pour concevoir son bureau ?",
+        emotion: "frown",
+        hand: "thinking",
+      },
+    ],
     stamp: [],
     answer: [
-      "Answser lampe écran un. Answser lampe écran un. Answser lampe écran un. Answser lampe écran un.",
-      "Answser lampe écran deux. Answser lampe écran deux. Answser lampe écran deux. Answser lampe écran deux.",
+      {
+        text: "Answser lampe écran un. Answser lampe écran un. Answser lampe écran un. Answser lampe écran un.",
+        emotion: "smile",
+        hand: "thinking",
+      },
     ],
   },
 ];
