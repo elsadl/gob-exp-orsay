@@ -1,5 +1,5 @@
 <script>
-  import { intro } from "../story/introLongue";
+  import { intro } from "../story/intro";
   import { passportOpen } from "../stores";
 
   import MiniGameContainer from "./mini-games/Container.svelte";
