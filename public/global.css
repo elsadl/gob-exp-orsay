@@ -74,6 +74,11 @@ button:focus {
 }
 
 .found {
-	transform: translateY(-10px);
-	box-shadow: 0px 8px 0px #D7CEC8;
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 0px #D7CEC8;
 }
+
+.desk-success {
+  background: url('/images/bureau.png') center no-repeat;
+  background-size: cover;
+} 
