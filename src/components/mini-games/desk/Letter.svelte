@@ -2,7 +2,6 @@
   export let letter;
   export let wordLetters;
 
-  import gsap, { Power3 } from 'gsap'; 
   import { createEventDispatcher } from "svelte";
   const dispatch = createEventDispatcher();
 
@@ -10,13 +9,11 @@
     let selected = e.target.getAttribute("data-letter");
     console.log(selected);
     if (wordLetters.includes(selected)) {
-      console.log("yup");
       dispatch("newLetter", {
         letter: selected,
       });
       document.getElementById("letter-" + selected).classList.add("disabled");
     } else {
-      console.log("nope");
       e.target.classList.add('shaking')
       setTimeout(() => {
         e.target.classList.remove('shaking')

@@ -9,7 +9,8 @@
   const { sentences: sentencesGroupe } = intro;
 
   let isPassport = navBtn[0];
-  $: isIntro = true;
+  // dév !!! à repasser à true;
+  $: isIntro = false;
 
   $: sentences = [...sentencesGroupe];
 

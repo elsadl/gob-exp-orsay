@@ -4,11 +4,13 @@
 
   import Speech from "../Speech.svelte";
   import MiniGameSpeech from "./MiniGameSpeech.svelte";
-  import NewStamp from "./newStamp.svelte";
+  import NewStamp from "./NewStamp.svelte";
 
   const gameLoop = ["clue", "question", "mini-game", "answer", "stamp"];
 
-  $: loopIndex = 0;
+  // DÉV !! à repasser à 0
+  // $: loopIndex = 0;
+  $: loopIndex = 4;
 
   $: activeGame = $miniGames[$miniGameIndex];
 
