@@ -40,17 +40,18 @@
   });
 
   let startDetection = (e) => {
-    console.log("start");
-    console.log(e);
-    
     // si on appuie sur le tracé actif, on lance le tracé
-    // if (pointerType === "touch") {
-    // } else {
-    if (e.path[0].id === "modele-" + lines[index].id) {
+    if (pointerType === "touch" && e.target.id === "svg") {
       tracing = true;
       lines[index].startingPoint = [e.clientX, e.clientY];
+    } else {
+      if (e.path[0].id === "modele-" + lines[index].id) {
+        tracing = true;
+        lines[index].startingPoint = [e.clientX, e.clientY];
+      }
     }
-    // }
+    console.log("start");
+    console.log(e);
   };
 
   let stopDetection = (e) => {
