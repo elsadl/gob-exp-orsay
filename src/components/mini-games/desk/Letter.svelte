@@ -7,7 +7,6 @@
 
   let selectLetter = (e) => {
     let selected = e.target.getAttribute("data-letter");
-    console.log(selected);
     if (wordLetters.includes(selected)) {
       dispatch("newLetter", {
         letter: selected,

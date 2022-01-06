@@ -68,13 +68,13 @@
     <div class="speech">
       <p class="sentence">
         {#if sentences[count]}
-          {#each sentences[count].text as item}
+          <!-- {#each sentences[count].text as item}
             {#if item === " "}
               <span class="char space" />
-            {:else}
-              <span class="char">{@html item}</span>
-            {/if}
-          {/each}
+            {:else} -->
+              <span class="char">{@html sentences[count].text}</span>
+            <!-- {/if} -->
+          <!-- {/each} -->
         {/if}
       </p>
     </div>

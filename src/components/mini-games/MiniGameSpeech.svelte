@@ -1,7 +1,7 @@
 <script>
   import { miniGameIndex } from "./../../stores";
 
-  let miniGame = miniGameIndex === 0 ? "desk" : "lamp";
+  let miniGame = $miniGameIndex === 0 ? "desk" : "lamp";
 
   export let question;
 </script>
@@ -24,7 +24,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 90px;
+    margin-bottom: 40px;
   }
 
   .speech-container.lamp {

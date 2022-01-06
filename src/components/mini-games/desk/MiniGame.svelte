@@ -1,4 +1,5 @@
 <script>
+  import gsap, { Power3 } from 'gsap';
   import Word from "./Word.svelte";
   import Letters from "./Letters.svelte";
 
@@ -12,18 +13,40 @@
   $: discoveredLetters = [];
 
   let handleNewLetter = (e) => {
-    console.log(e.detail.letter);
     if (!discoveredLetters.includes(e.detail.letter)) {
       discoveredLetters.push(e.detail.letter);
     }
     discoveredLetters = discoveredLetters;
 
     if (discoveredLetters.length === wordLetters.length) {
+
+      setTimeout(() => {
+        gsap
+        .to('.guess-letter', {
+          y: -30, 
+          duration: .4, 
+          stagger: {
+            each: 0.05,
+            from: "start"
+          },
+          ease: Power3.easeOut,
+        })
+        gsap.to('.guess-letter', {
+          y: 0, 
+          duration: .4, 
+          stagger: {
+            each: 0.02,
+            from: "start"
+          },
+          delay: ".8",
+          ease: Power3.easeIn,
+        })
+      }, 350);
+
       setTimeout(() => {
         dispatch("endMiniGame");
-      }, 1500);
+      }, 2200);
     }
-    console.log(discoveredLetters);
   };
 </script>
 

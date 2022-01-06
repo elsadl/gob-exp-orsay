@@ -31,7 +31,7 @@
   #letters-grid {
     width: 680px;
     margin: 0 auto;
-    padding-top: 56px;
+    padding-top: 60px;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     row-gap: 25px;
