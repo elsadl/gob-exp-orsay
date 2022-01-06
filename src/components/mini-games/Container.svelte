@@ -5,6 +5,7 @@
   import Speech from "../Speech.svelte";
   import MiniGameSpeech from "./MiniGameSpeech.svelte";
   import NewStamp from "./NewStamp.svelte";
+  import Conclusion from "../Conclusion.svelte"
 
   const gameLoop = ["clue", "question", "mini-game", "answer", "stamp"];
 
@@ -62,7 +63,7 @@
       <NewStamp game={activeGame} on:stampCollected={handleStampCollected} />
     {/if}
   {:else}
-    <p>conclu</p>
+    <Conclusion />
   {/if}
 </div>
 
